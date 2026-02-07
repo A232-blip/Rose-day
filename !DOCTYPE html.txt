@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Rose Day 🌹</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #b11226, #ff4d6d);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .heart {
+      font-size: 3rem;
+      animation: beat 1s infinite;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      background: white;
+      color: #b11226;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    }
+
+    .rose-screen {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle, #ffccd5, #b11226);
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .rose {
+      font-size: 6rem;
+      animation: bloom 2s ease-in-out infinite alternate;
+    }
+
+    .rose-text {
+      font-size: 2rem;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes bloom {
+      from { transform: scale(0.8); }
+      to { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card" id="card">
+    <div class="heart">🌹</div>
+    <h1>Happy Rose Day Jyotisha</h1>
+    <button class="btn" onclick="showRose()">For You 💝</button>
+  </div>
+
+  <div class="rose-screen" id="roseScreen">
+    <div class="rose">🌹</div>
+    <div class="rose-text">A rose for the one who makes my world beautiful 💖</div>
+  </div>
+
+  <script>
+    function showRose() {
+      document.getElementById('card').style.display = 'none';
+      document.getElementById('roseScreen').style.display = 'flex';
+    }
+  </script>
+</body>
+</html>
